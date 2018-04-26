@@ -18,14 +18,15 @@ https://github.com/datsoftlyngby/soft2018spring-databases-teaching-material/tree
 After the files has been downloaded (specifically social_network_nodes.csv), we then unpack the files. 
 
 `
-sed -i -E '1s/.*/:ID,name,job,birthday/' social_network_nodes.csv
+sed -i -E '1s/.*/:ID,name,job,birthday/' social_network_nodes.csv `
 
-sed -i -E '1s/.*/:START_ID,:END_ID/' social_network_edges.csv
 `
+sed -i -E '1s/.*/:START_ID,:END_ID/' social_network_edges.csv `
+
 
 We then need to create the container and fill it with the data, using the following command.
 
-`
+```
 docker run \
     -d --name neo4j \
     --rm \
@@ -48,6 +49,7 @@ docker exec neo4j sh -c 'neo4j-admin import \
     --ignore-missing-nodes=true \
     --ignore-duplicate-nodes=true \
     --id-type=INTEGER'
-`
+
+```
     
     
