@@ -51,5 +51,5 @@ docker exec neo4j sh -c 'neo4j-admin import \
     --id-type=INTEGER'
 
 ```
-    
-    
+### Note
+Was unable to establish connect to SQL server.
