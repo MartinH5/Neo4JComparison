@@ -19,10 +19,11 @@ After the files has been downloaded (specifically social_network_nodes.csv), we 
 
 `
 sed -i -E '1s/.*/:ID,name,job,birthday/' social_network_nodes.csv
+
 sed -i -E '1s/.*/:START_ID,:END_ID/' social_network_edges.csv
 `
 
-We then need to create the container and fill it with the data, using the following commnad.
+We then need to create the container and fill it with the data, using the following command.
 
 `
 docker run \
